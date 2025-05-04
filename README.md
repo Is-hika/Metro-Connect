@@ -2,7 +2,6 @@
 **Delhi's Ultimate Metro Navigation System**  
 *A seamless blend of route planning, fare calculation, and tourist guidance*
 
-![Project Banner](https://github.com/user-attachments/assets/cfc223d5-e204-42e1-a1e9-1f4980b4bb9a)
 
 ## 🌟 Key Features
 <div align="center">
