@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro Connect | Delhi Metro Rail Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-subway logo-icon"></i>
+                <span>METRO CONNECT</span>
+            </a>
+        </div>
+        <p class="tagline">Your Complete Delhi Metro Rail Information Guide</p>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="routes.html">Route Planner</a></li>
+                <li><a href="fare.html">Fare Calculator</a></li>
+                <li><a href="tourist.html">Tourist Guide</a></li>
+            </ul>
+            
+    </nav>
+    
+    <main class="container">
+        <section class="hero">
+            <h1>Delhi Metro Rail Corporation (DMRC)</h1>
+            <p>Metro Connect provides comprehensive information about Delhi Metro routes, fares, stations, and tourist attractions. Plan your journey, calculate fares, and explore Delhi with our easy-to-use tools.</p>
+        </section>
+        
+        <section class="features">
+            <a href="routes.html" class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-route"></i>
+                </div>
+                <h3 class="feature-title">Route Planner</h3>
+                <p>Find the best route between any two stations with our interactive route planner and metro map.</p>
+            </a>
+            
+            <a href="fare.html" class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h3 class="feature-title">Fare Calculator</h3>
+                <p>Calculate exact fares between any two stations before you travel. No surprises!</p>
+            </a>
+            
+            <a href="tourist.html" class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-train"></i>
+                </div>
+                <h3 class="feature-title">Tourist Guide</h3>
+                <p>Top attractions in Delhi and nearest metro stations.</p>
+            </a>
+        </section>
+        
+        <section class="metro-map-section">
+            <div class="container">
+                <h2>Delhi Metro Map</h2>
+                <div class="map-container">
+                    <img src="WhatsApp Image 2025-05-02 at 02.33.13_3a1b938d.jpg" 
+                         alt="Delhi Metro Map" 
+                         class="metro-map">
+                    <p class="map-caption">Comprehensive map of Delhi Metro network with all lines and stations</p>
+                    <a href="https://www.heritagebazar.com/products/delhi-metro-map" 
+                       class="download-btn" 
+                       download="Delhi-Metro-Map">
+                        <i class="fas fa-download"></i> Download Map
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="faq-section">
+            <h2>Delhi Metro FAQs</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Q. What items are not allowed in Delhi Metro?
+                </div>
+                <div class="faq-answer">
+                    <p>A. The list of prohibited items in Delhi Metro includes:</p>
+                    <ul>
+                        <li>Sharp Objects: Knives, swords, meat cleavers, etc.</li>
+                        <li>Explosive Materials: Gunpowder, fireworks, hand grenades, plastic explosives, etc.</li>
+                        <li>Inflammable Items: Paints, petroleum, aerosols, wet batteries, etc.</li>
+                        <li>Offensive Items: Blood, carcasses of dead animals, unsealed raw meat/fish, plants/saplings, skeletons, bones, rags, etc.</li>
+                        <li>Pets: Birds and other animals.</li>
+                    </ul>
+                    <p>The list is updated periodically by Delhi Metro.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Q. How much luggage is allowed in Delhi Metro?
+                </div>
+                <div class="faq-answer">
+                    <p>A. Regular Metro Lines: One bag containing personal belongings is allowed, with dimensions not exceeding 80 cm x 50 cm x 30 cm and a maximum weight of 25 kg. Baggage in the form of bundles is not permitted.</p>
+                    <p>Airport Express Line: Two bags containing personal belongings are allowed, with dimensions not exceeding 90 cm x 75 cm x 45 cm and a maximum weight of 32 kg. Baggage in the form of bundles is not permitted.</p>
+                </div>
+            </div>
+            
+            <!-- Add more FAQ items as needed -->
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Q. What are the operational hours of Delhi Metro?
+                </div>
+                <div class="faq-answer">
+                    <p>A. The Delhi Metro operates from approximately 5:30 AM to 11:30 PM, with the first and last train times varying slightly by line and station. On Sundays and holidays, services may start a little later.</p>
+                    <p>The Airport Express Line operates from 4:45 AM to 11:30 PM.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Q. Are there any discounts available for frequent travelers?
+                </div>
+                <div class="faq-answer">
+                    <p>A. Yes, Delhi Metro offers several smart card options with discounted fares:</p>
+                    <ul>
+                        <li>Regular Smart Card: 10% discount on every ride</li>
+                        <li>Student Smart Card: 20% discount for students with valid ID</li>
+                        <li>Senior Citizen Smart Card: 30% discount for senior citizens (women above 58 years and men above 60 years)</li>
+                        <li>Tourist Smart Card: Unlimited travel for 1 or 3 days</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Q. Why is food not allowed in Delhi Metro?
+                </div>
+                <div class="faq-answer">
+                    <p>A. Eating is not allowed in Delhi Metro to maintain cleanliness in trains and at stations. Passengers can carry food, but they are not permitted to consume it during their journey. Officials monitor this at stations and on trains. Most interchange metro stations have cafes and food outlets where passengers can sit and eat.</p>
+                   
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Q. Can I eat or drink inside the Delhi Metro?
+                </div>
+                <div class="faq-answer">
+                    <p>A. No, eating and drinking are prohibited inside Delhi Metro trains and stations. Announcements are regularly made to remind passengers of this rule.</p>
+                   
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Q. Can I carry alcohol, tobacco, or cigarettes in Delhi Metro?
+                </div>
+                <div class="faq-answer">
+                    <p>A. Delhi Metro allowed drug items as per following instructions:
+
+                        Alcohol: Two sealed bottles of alcohol are allowed per passenger.
+                        Cigarettes/Tobacco: One packet of cigarettes and one lighter or matchbox per passenger is permitted.
+                        While carrying alcohol, tobacco, and cigarettes is allowed, consumption of these items inside the Delhi Metro is strictly prohibited.</p>
+                   
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <!-- Keep the footer from original -->
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro Connect | Delhi Metro Rail Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-subway logo-icon"></i>
+                <span>METRO CONNECT</span>
+            </a>
+        </div>
+        <p class="tagline">Your Complete Delhi Metro Rail Information Guide</p>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="routes.html">Route Planner</a></li>
+                <li><a href="fare.html">Fare Calculator</a></li>
+                <li><a href="tourist.html">Tourist Guide</a></li>
+            </ul>
+            
+    </nav>
+    
+    <main class="container">
+        <section class="hero">
+            <h1>Delhi Metro Rail Corporation (DMRC)</h1>
+            <p>Metro Connect provides comprehensive information about Delhi Metro routes, fares, stations, and tourist attractions. Plan your journey, calculate fares, and explore Delhi with our easy-to-use tools.</p>
+        </section>
+        
+        <section class="features">
+            <a href="routes.html" class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-route"></i>
+                </div>
+                <h3 class="feature-title">Route Planner</h3>
+                <p>Find the best route between any two stations with our interactive route planner and metro map.</p>
+            </a>
+            
+            <a href="fare.html" class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h3 class="feature-title">Fare Calculator</h3>
+                <p>Calculate exact fares between any two stations before you travel. No surprises!</p>
+            </a>
+            
+            <a href="tourist.html" class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-train"></i>
+                </div>
+                <h3 class="feature-title">Tourist Guide</h3>
+                <p>Top attractions in Delhi and nearest metro stations.</p>
+            </a>
+        </section>
+        
+        <section class="metro-map-section">
+            <div class="container">
+                <h2>Delhi Metro Map</h2>
+                <div class="map-container">
+                    <img src="WhatsApp Image 2025-05-02 at 02.33.13_3a1b938d.jpg" 
+                         alt="Delhi Metro Map" 
+                         class="metro-map">
+                    <p class="map-caption">Comprehensive map of Delhi Metro network with all lines and stations</p>
+                    <a href="https://www.heritagebazar.com/products/delhi-metro-map" 
+                       class="download-btn" 
+                       download="Delhi-Metro-Map">
+                        <i class="fas fa-download"></i> Download Map
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="faq-section">
+            <h2>Delhi Metro FAQs</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Q. What items are not allowed in Delhi Metro?
+                </div>
+                <div class="faq-answer">
+                    <p>A. The list of prohibited items in Delhi Metro includes:</p>
+                    <ul>
+                        <li>Sharp Objects: Knives, swords, meat cleavers, etc.</li>
+                        <li>Explosive Materials: Gunpowder, fireworks, hand grenades, plastic explosives, etc.</li>
+                        <li>Inflammable Items: Paints, petroleum, aerosols, wet batteries, etc.</li>
+                        <li>Offensive Items: Blood, carcasses of dead animals, unsealed raw meat/fish, plants/saplings, skeletons, bones, rags, etc.</li>
+                        <li>Pets: Birds and other animals.</li>
+                    </ul>
+                    <p>The list is updated periodically by Delhi Metro.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Q. How much luggage is allowed in Delhi Metro?
+                </div>
+                <div class="faq-answer">
+                    <p>A. Regular Metro Lines: One bag containing personal belongings is allowed, with dimensions not exceeding 80 cm x 50 cm x 30 cm and a maximum weight of 25 kg. Baggage in the form of bundles is not permitted.</p>
+                    <p>Airport Express Line: Two bags containing personal belongings are allowed, with dimensions not exceeding 90 cm x 75 cm x 45 cm and a maximum weight of 32 kg. Baggage in the form of bundles is not permitted.</p>
+                </div>
+            </div>
+            
+            <!-- Add more FAQ items as needed -->
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Q. What are the operational hours of Delhi Metro?
+                </div>
+                <div class="faq-answer">
+                    <p>A. The Delhi Metro operates from approximately 5:30 AM to 11:30 PM, with the first and last train times varying slightly by line and station. On Sundays and holidays, services may start a little later.</p>
+                    <p>The Airport Express Line operates from 4:45 AM to 11:30 PM.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Q. Are there any discounts available for frequent travelers?
+                </div>
+                <div class="faq-answer">
+                    <p>A. Yes, Delhi Metro offers several smart card options with discounted fares:</p>
+                    <ul>
+                        <li>Regular Smart Card: 10% discount on every ride</li>
+                        <li>Student Smart Card: 20% discount for students with valid ID</li>
+                        <li>Senior Citizen Smart Card: 30% discount for senior citizens (women above 58 years and men above 60 years)</li>
+                        <li>Tourist Smart Card: Unlimited travel for 1 or 3 days</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Q. Why is food not allowed in Delhi Metro?
+                </div>
+                <div class="faq-answer">
+                    <p>A. Eating is not allowed in Delhi Metro to maintain cleanliness in trains and at stations. Passengers can carry food, but they are not permitted to consume it during their journey. Officials monitor this at stations and on trains. Most interchange metro stations have cafes and food outlets where passengers can sit and eat.</p>
+                   
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Q. Can I eat or drink inside the Delhi Metro?
+                </div>
+                <div class="faq-answer">
+                    <p>A. No, eating and drinking are prohibited inside Delhi Metro trains and stations. Announcements are regularly made to remind passengers of this rule.</p>
+                   
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Q. Can I carry alcohol, tobacco, or cigarettes in Delhi Metro?
+                </div>
+                <div class="faq-answer">
+                    <p>A. Delhi Metro allowed drug items as per following instructions:
+
+                        Alcohol: Two sealed bottles of alcohol are allowed per passenger.
+                        Cigarettes/Tobacco: One packet of cigarettes and one lighter or matchbox per passenger is permitted.
+                        While carrying alcohol, tobacco, and cigarettes is allowed, consumption of these items inside the Delhi Metro is strictly prohibited.</p>
+                   
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <!-- Keep the footer from original -->
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
