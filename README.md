@@ -12,6 +12,8 @@
 | **Interactive Dashboard** | ![Dashboard](https://github.com/user-attachments/assets/786a1ecb-d0b0-4f7c-bcb4-cd2dc19fea67) |
 | **Smart Route Planner** | ![Route Planner](https://github.com/user-attachments/assets/3a6869cc-5f61-44bb-a724-39971c34c9df) |
 | **Tourist Guide** | ![Tourist Guide](https://github.com/user-attachments/assets/531e5535-e98b-4e9f-b162-4e87fa3a493d) |
+| **Fare Calculator** | ![Fare Calculator](https://github.com/user-attachments/assets/f1dbf76f-577e-4cf8-a78c-9014ed9439cd)
+) |
 
 </div>
 
