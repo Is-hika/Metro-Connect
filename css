@@ -1,0 +1,736 @@
+:root {
+    --primary: #FF6700;
+    --secondary: #0057B7;
+    --dark: #333;
+    --light: #f5f5f5;
+    --gray: #777;
+    --red-line: #FF0000;
+    --yellow-line: #FFFF00;
+    --blue-line: #0000FF;
+    --green-line: #008000;
+    --violet-line: #8B00FF;
+    --pink-line: #FFC0CB;
+    --orange-line: #FFA500;
+    --grey-line: #808080;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://images.unsplash.com/photo-1569336415962-a2bdda635d96?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    color: var(--primary);
+    margin-right: 10px;
+    font-size: 3rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--secondary);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 0.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: var(--primary);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 4px;
+    padding: 0.3rem;
+}
+
+.search-box input {
+    border: none;
+    padding: 0.5rem;
+    outline: none;
+    width: 200px;
+}
+
+.search-box button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Main Content */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.hero {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.feature-title {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+/* Section styles */
+.section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Fare Calculator styles */
+.fare-calculator {
+    background-color: #ffebee;
+    padding: 2rem;
+    border: 2px solid #ffcdd2;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fare-calculator h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #c2185b;
+}
+
+.calculator-form select, .calculator-form button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+.calculator-form button {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.calculator-form button:hover {
+    background-color: #2563eb;
+}
+
+#fare-result {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #c2185b;
+}
+
+/* Route Planner Styles */
+.route-planner {
+    background-color: #e8f4f8;
+    padding: 2rem;
+    border: 2px solid #b3e0ff;
+    border-radius: 0.5rem;
+}
+
+.route-results {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+}
+
+.route-results h3 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.route-results ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.route-results li {
+    margin-bottom: 0.5rem;
+}
+
+/* Tourist Guide Styles */
+/* ================== */
+/* TOURIST GUIDE STYLES */
+/* ================== */
+
+.attraction-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.attraction-header h2 {
+    color: var(--secondary);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.attraction-header p {
+    font-size: 1.1rem;
+    color: var(--gray);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.attraction-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.attraction-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.attraction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.attraction-image {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.attraction-content {
+    padding: 1.25rem;
+}
+
+.attraction-content h3 {
+    color: var(--secondary);
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+}
+
+.attraction-content p {
+    color: var(--gray);
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.metro-access {
+    display: flex;
+    align-items: center;
+    background: #f8f8f8;
+    padding: 0.7rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.metro-access i {
+    color: var(--primary);
+    font-size: 1.3rem;
+    margin-right: 0.8rem;
+}
+
+.metro-access span {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.timing-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--gray);
+    flex-wrap: wrap;
+}
+
+.best-time {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .attraction-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .attraction-header p {
+        font-size: 1rem;
+    }
+    
+    .attraction-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .attraction-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timing-info {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Delhi Metro Map Section Styles */
+.metro-map-section {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.metro-map-section h2 {
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.metro-map-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+.map-container {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.metro-map {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.metro-map:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.map-caption {
+    margin-top: 1rem;
+    color: var(--gray);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    gap: 0.5rem;
+}
+
+.download-btn:hover {
+    background-color: #e55c00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.download-btn i {
+    font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .map-container {
+        padding: 1rem;
+    }
+    
+    .metro-map-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .download-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .metro-map-section {
+        margin: 2rem 0;
+    }
+    
+    .map-container {
+        padding: 0.5rem;
+    }
+    
+    .map-caption {
+        font-size: 0.8rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 3rem 1rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-column h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #444;
+    color: #999;
+}
+
+/* ================== */
+/* FAQ SECTION STYLES */
+/* ================== */
+
+.faq-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section h2 {
+    color: var(--secondary);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.faq-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: var(--primary);
+}
+
+.faq-question {
+    padding: 1.2rem 1.5rem;
+    background-color: #f8f8f8;
+    color: var(--secondary);
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f0f0f0;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 1.5rem;
+    font-size: 1.3rem;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active::after {
+    content: '-';
+    transform: rotate(0deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: white;
+}
+
+.faq-answer.active {
+    max-height: 500px; /* Adjust based on your longest answer */
+}
+
+.faq-answer p, .faq-answer ul {
+    padding: 1rem 1.5rem;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--dark);
+}
+
+.faq-answer ul {
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.faq-answer li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.faq-answer li::before {
+    content: '•';
+    color: var(--primary);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .faq-question {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    .faq-answer p, .faq-answer ul {
+        padding: 0.8rem 1rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .search-box {
+        margin-top: 1rem;
+        width: 100%;
+    }
+    
+    .search-box input {
+        width: 100%;
+    }
+    
+    .logo {
+        font-size: 2rem;
+    }
+    
+    .logo-icon {
+        font-size: 2.5rem;
+    }
+    
+    .line-item {
+        flex-wrap: wrap;
+    }
+    
+    .line-name {
+        min-width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .station-dots {
+        margin-top: 10px;
+        margin-left: 35px;
+    }
+}
